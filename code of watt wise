@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WattWise</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      margin: 50px auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+    }
+
+    button {
+      background: green;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Watt Wise</h1>
+
+  <div class="container">
+    <label>Fan (hours/day):</label>
+    <input type="number" id="fan">
+
+    <label>AC (hours/day):</label>
+    <input type="number" id="ac">
+
+    <label>Lights (hours/day):</label>
+    <input type="number" id="light">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <h2 id="result"></h2>
+  </div>
+
+  <script>
+    function calculate() {
+      let fan = document.getElementById("fan").value;
+      let ac = document.getElementById("ac").value;
+      let light = document.getElementById("light").value;
+
+      let totalUnits = (fan * 0.075 + ac * 1.5 + light * 0.02) * 30;
+
+      let resultText = "Monthly Units: " + totalUnits.toFixed(2);
+
+      if (totalUnits > 200) {
+        resultText += " ⚠ High usage!";
+      } else {
+        resultText += " Good usage!";
+      }
+
+      document.getElementById("result").innerText = resultText;
+    }
+  </script>
+
+</body>
+</html>
