@@ -70,7 +70,7 @@ WattWise provides an easy way to calculate monthly energy usage by:
 
 ---
 
-## 🌍 Impact
+##  Impact
 WattWise helps users understand their energy consumption and encourages smarter electricity usage, contributing to cost savings and sustainability.
 
 ---
