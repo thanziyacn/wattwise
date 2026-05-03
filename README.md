@@ -78,4 +78,7 @@ WattWise helps users understand their energy consumption and encourages smarter 
 ## 👩‍💻 Author
 Thanziya Cn
 
+
+
+
 2. The system calculates:
